@@ -64,7 +64,10 @@
 
 @media screen and (max-width: 767px){
     .sect8{
-        padding: 50px 0;
+        padding: 56px 0;
+        &__title{
+            margin-bottom: 26px;
+        }
         &__table{
             width: 100%;
             &-title{
@@ -72,10 +75,14 @@
             }
             &-cell{
                 font-size: 8px;
+                text-align: center;
             }
             &-row{
                 font-size: 8px;
             }
+        }
+        .sect8__table-size .sect8__table-cell div:first-child{
+            margin-bottom: 8px;
         }
     }
 }

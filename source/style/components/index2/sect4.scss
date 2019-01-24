@@ -55,6 +55,7 @@
 
 @media screen and (max-width: 767px){
     .sect4{
+        padding: 20px 0 29px;
         background-image: none;
         &__blocks{
             width: 100%;
@@ -76,7 +77,7 @@
 @media screen and (max-width: 410px){
     .sect4{
         &__block{
-            width: 120px;
+            width: 126px;
             &-title{
                 font-size: 14px;
             }
