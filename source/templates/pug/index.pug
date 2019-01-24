@@ -4,7 +4,7 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='./style/foundation.css')
-        link(rel="stylesheet" href='./style/style.css?9')
+        link(rel="stylesheet" href='./style/style.css?1')
     body
 
         header.header2
@@ -520,11 +520,13 @@ html
                 $('.close').click(function() {
                     $('.adaptmenu').removeClass('adaptmenu_active');
                     $('body').css('overflow', 'visible');
+                    $('body').css('overflow-x', 'hidden');
                 });
 
                 $('.adaptmenu nav').click(function() {
                     $('.adaptmenu').removeClass('adaptmenu_active');
                     $('body').css('overflow', 'visible');
+                    $('body').css('overflow-x', 'hidden');
                 });
 
             });
