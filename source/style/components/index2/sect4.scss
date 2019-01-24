@@ -3,7 +3,7 @@
     border: 1px solid #e4e4e4;
 
     background-image: url(../images/index2/Nadoez-finals-0011.jpg);
-    background-position: left -217px top;
+    background-position: left rem(-217) top;
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -55,6 +55,11 @@
 
 @media screen and (max-width: 767px){
     .sect4{
-        padding: 0 0 24px 0;
+        background-image: none;
+        &__blocks{
+            width: 100%;
+            margin: 0;
+            justify-content: center;
+        }
     }
 }

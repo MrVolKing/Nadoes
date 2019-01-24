@@ -19,3 +19,12 @@
         margin: 0 auto;
     }
 }
+
+
+@media screen and (max-width: 767px){
+    .sect9{
+        &__subtitle {
+            font-size: rem(18);
+        }
+    }
+}

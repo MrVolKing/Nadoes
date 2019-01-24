@@ -35,3 +35,32 @@
         font-weight: 300;
     }
 }
+
+
+
+@media screen and (max-width: 767px){
+    .sect13{
+        padding: 20px 0 46px;
+        &__content{
+            flex-direction: column-reverse;
+        }
+
+        &__logo{
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        &__title{
+            font-size: 28px;
+            text-align: center;
+        }
+
+        &__desc{
+            width: 100%;
+        }
+
+        &__link{
+            font-size: 15px;
+        }
+    }
+}

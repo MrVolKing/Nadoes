@@ -4,7 +4,7 @@
     <title>PageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./style/foundation.css">
-    <link rel="stylesheet" href="./style/style.css?3">
+    <link rel="stylesheet" href="./style/style.css?4">
   </head>
   <body>
     <header class="header2">
@@ -409,14 +409,16 @@
     <script src="js/custom.js"></script>
     <script>
       $(function() {
-          if ($(window).width() >= 768) {
-              $('#sect10__slider').slick({
-                  infinite: true,
-                  dots: true,
-                  appendDots: '#sect10__slider-dots',
-                  autoplay: true,
-              });
-          }
+          //- if ($(window).width() >= 768) {
+              
+          //- }
+      
+          $('#sect10__slider').slick({
+              infinite: true,
+              dots: true,
+              appendDots: '#sect10__slider-dots',
+              autoplay: true,
+          });
       
           $('.open-modal-order').on('click', function(e) {
               e.preventDefault();
