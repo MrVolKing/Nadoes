@@ -1,0 +1,11 @@
+.sect3 {
+    text-align: center;
+    padding: rem(50) 0;
+}
+
+
+@media screen and (max-width: 767px){
+    .sect3{
+        padding: 0 0 24px 0;
+    }
+}

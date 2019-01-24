@@ -1,0 +1,12 @@
+.title2 {
+    color: #3c3c3c;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+
+@media screen and (max-width: 767px){
+    .title2{
+        font-size: 28px;
+    }
+}

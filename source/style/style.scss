@@ -1,0 +1,151 @@
+@font-face {
+    font-family: dinpro;
+    src: url(../fonts/dr.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    src: url(../fonts/db.otf);
+    font-family: dinpro;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
+
+@import "helpers/**/*.scss";
+@import "components/**/*.scss";
+
+html {
+    font-size: 16px;
+    font-family: dinpro;
+}
+
+@media screen and (max-width: 1560px) {
+    html {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 16px;
+    }
+
+    section, header, footer {
+        overflow-x: hidden;
+    }
+}
+
+
+
+// media
+
+
+.header2{
+    background-color: white;
+}
+
+.burger{
+    width: 25px;
+    display: none;
+}
+
+.adaptmenu{
+    display: none;
+}
+
+
+@media screen and (max-width: 767px){
+    .burger{
+        display: block;
+    }
+    
+    .header2{
+        .main2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__logo{
+            width: 120px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &__content{
+            background-color: white;
+            padding: 10px 0;
+        }
+
+        &__nav{
+            display: none;
+        }
+
+        &__btn{
+            display: none;
+        }
+
+        &__tel{
+            display: none;
+        }
+    }
+    .adaptmenu{
+        position: absolute;
+        background: white;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: .3s;
+        width: 80%;
+        height: 100vh;
+        padding: 16px;
+        display: block;
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .close{
+            width: 16px;
+            height: 16px;
+            margin-bottom: 30px;
+        }
+
+        &__nav{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            text-align: center;
+            a{
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+
+        &__tel{
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        &__btn{
+            display: block;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+    }
+    .adaptmenu_active{
+        transform: translateX(0%);
+        transition: .3s;
+    }
+}

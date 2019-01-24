@@ -1,0 +1,15 @@
+.logo {
+    width: rem(140);
+    height: rem(187);
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 56px;
+        height: 76px;
+    }
+}

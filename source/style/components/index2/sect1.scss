@@ -1,0 +1,52 @@
+.sect1 {
+    padding: rem(109) 0 rem(106);
+    background-image: url(../images/index2/Nadoez-finals-0001.jpg);
+    background-size: cover;
+    background-position: center top;
+
+    color: white;
+
+    &__title {
+        font-size: rem(84);
+        font-weight: 400;
+    }
+
+    &__subtitle {
+        font-size: rem(40);
+        font-weight: 400;
+    }
+
+    &__desc {
+        font-size: rem(24);
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-top: rem(20);
+        margin-bottom: rem(47);
+    }
+
+    &__btns {
+        display: flex;
+
+        .btn2 {
+            width: rem(250);
+            margin-right: rem(35);
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .sect1{
+        &__title{
+            font-size: 60px;
+        }
+
+        &__subtitle{
+            font-size: 30px;
+        }
+
+        &__desc{
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.sect13 {
+    background-color: #37dbe9;
+    padding: rem(50) 0 rem(46);
+
+    color: white;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__desc {
+        width: rem(532);
+        color: white;
+    }
+
+    &__title {
+        font-size: rem(40);
+        font-weight: 400;
+    }
+
+    &__divider {
+        height: 1px;
+        width: 100%;
+        background-color: #ffffff;
+        margin: rem(15) 0 rem(25);
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: rem(10);
+
+        color: white;
+        font-size: rem(18);
+        font-weight: 300;
+    }
+}

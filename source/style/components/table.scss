@@ -1,0 +1,128 @@
+.table {
+    margin: 0 auto;
+    width: rem(1041);
+    border-left: 1px solid #e9f1f3;
+    border-right: 1px solid #e9f1f3;
+
+    &__header {
+        display: flex;
+        background-color: #1e8aee;
+        color: white;
+    }
+
+    &__cell {
+        font-size: rem(16);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: rem(43);
+
+        &--size {
+            width: rem(200);
+
+            &-left {
+                width: rem(100);
+            }
+            &-right {
+                width: rem(100);
+            }
+        }
+        &--age {
+            width: rem(190);
+        }
+        &--height {
+            width: rem(203);
+        }
+        &--weight {
+            width: rem(202);
+        }
+        &--waist {
+            width: rem(240);
+        }
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    .table__body .table__cell {
+        border-bottom: 1px solid #e9f1f3;
+        color: #868d8e;
+
+        &:not(:last-child) {
+            border-right: 1px solid #e9f1f3;
+        }
+
+        &--size-left,
+        &--size-right,
+        &--age {
+            text-align: left;
+        }
+
+        &--size-left {
+            padding-left: rem(28);
+        }
+        &--size-right {
+            padding-left: rem(18);
+        }
+        &--age {
+            padding-left: rem(42);
+        }
+    }
+}
+
+.table-wrapper {
+    overflow: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .table:not(.not-adaptive) {
+        width: 100%;
+
+        .table__cell {
+            font-size: 2vw;
+
+            &--size {
+                width: 20vw;
+
+                &-left {
+                    width: 10vw;
+                }
+                &-right {
+                    width: 10vw;
+                }
+            }
+            &--age {
+                width: 20vw;
+            }
+            &--height {
+                width: 20vw;
+            }
+            &--weight {
+                width: 20vw;
+            }
+            &--waist {
+                width: 20vw;
+            }
+        }
+
+        .table__body .table__cell {
+
+            &--size-left,
+            &--size-right,
+            &--age {
+                text-align: left;
+            }
+
+            &--size-left {
+                padding-left: 2vw;
+            }
+            &--size-right {
+                padding-left: 2vw;
+            }
+            &--age {
+                padding-left: 2vw;
+            }
+        }
+    }
+}

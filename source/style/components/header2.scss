@@ -1,0 +1,60 @@
+.header2 {
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem(17) 0 rem(27);
+    }
+
+    &__logo {
+        width: rem(183);
+        height: rem(65);
+        background-image: url(../images/logo2.svg);
+        background-size: contain;
+        margin-right: rem(95);
+    }
+
+    &__nav {
+        display: flex;
+
+        a {
+            font-size: rem(16);
+            font-weight: 300;
+            color: #3c3c3c;
+
+            margin-right: rem(39);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+
+    &__tel {
+        color: #3c3c3c;
+        font-size: rem(16);
+        font-weight: 400;
+        text-decoration: none;
+
+        display: flex;
+        padding-left: rem(24);
+        background-image: url(../images/index2/phone.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+
+    &__btn {
+        width: rem(159);
+        height: rem(40);
+        background-color: #ff7ee2;
+        border-radius: rem(20);
+        display: flex;;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: rem(16);
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}

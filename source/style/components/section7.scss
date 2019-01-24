@@ -1,0 +1,26 @@
+.section7 {
+    background-color: #9b25d2;
+    padding: rem(106) 0 rem(331);
+
+    &__title {
+        font-size: rem(48);
+        color: #fefefe;
+        margin-bottom: rem(201);
+        text-align: center;
+    }
+
+    .main {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section7 {
+        padding: 49px 0 143px;
+
+        &__title {
+            font-size: 22px;
+            margin-bottom: 61px;
+        }
+    }
+}

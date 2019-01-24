@@ -1,0 +1,18 @@
+.main2 {
+    width: 1070px;
+    margin: 0 auto;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media screen and (max-width: 1070px) {
+    .main2 {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main2 {
+        width: calc(100% - 40px);
+    }
+}

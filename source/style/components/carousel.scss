@@ -1,0 +1,110 @@
+.carousel {
+
+    &-prev {
+        width: rem(26);
+        height: rem(46);
+        background-image: url('../images/carousel-prev.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 10;
+
+        cursor: pointer;
+
+        &:hover {
+            background-image: url('../images/carousel-next.svg');
+            transform: rotate(180deg);
+        }
+    }
+    &-next {
+        width: rem(26);
+        height: rem(46);
+        background-image: url('../images/carousel-prev.svg');
+        transform: rotate(180deg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 10;
+
+        cursor: pointer;
+
+        &:hover {
+            background-image: url('../images/carousel-next.svg');
+            transform: rotate(0);
+        }
+    }
+
+    &-dots {
+        position: absolute;
+        bottom: rem(-197);
+        left: 0;
+        right: 0;
+
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+
+            li button::before {
+                color: white;
+                font-size: rem(10);
+                opacity: 1
+            }
+
+
+            li.slick-active button::before {
+                color: #f5bf06;
+                font-size: rem(20);
+                opacity: 1
+            }
+        }
+    }
+
+    padding: 0 rem(100);
+
+    &__slide {
+        padding-right: rem(178);
+    }
+
+    &__color {
+        width: rem(58);
+        height: rem(3);
+        margin-bottom: rem(30);
+    }
+
+    &__subtitle {
+        color: white;
+        font-size: rem(18);
+        text-transform: uppercase;
+        margin-bottom: rem(30);
+    }
+
+    &__desc {
+        font-size: rem(20);
+        color: #e7b9fc;
+        line-height: rem(30);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .carousel {
+        padding: 0 0;
+
+        &__slide {
+            padding-right: 0;
+        }
+
+        &-dots {
+            bottom: -63px;
+        }
+    }
+    .carousel-prev,
+    .carousel-next {
+        display: none !important;
+    }
+}

@@ -1,0 +1,11 @@
+.text {
+    font-size: rem(22);
+    line-height: rem(34);
+}
+
+@media screen and (max-width: 767px) {
+    .text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

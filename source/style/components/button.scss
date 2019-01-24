@@ -1,0 +1,49 @@
+.button {
+    height: rem(50);
+    padding: 0 rem(40);
+    border-radius: rem(25);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: rem(16);
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &--blue {
+        background-color: #84c2c6;
+    }
+    &--yellow {
+        background-color: #f5bf06;
+    }
+    &--red {
+        background-color: #ff1e59;
+    }
+    &--transparent {
+        background-color: rgba(0,0,0,0);
+        border: 1px solid white;
+    }
+
+    &--big {
+        height: rem(80);
+        padding: 0 rem(65);
+        font-size: rem(26);
+        border-radius: rem(40);
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .button {
+        &--adptv {
+            display: flex;
+            width: 280px;
+            font-size: 16px;
+            height: 50px;
+            margin: 0 auto;
+        }
+    }
+}

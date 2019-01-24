@@ -1,0 +1,21 @@
+.sect9 {
+    padding: 0 0 rem(50);
+
+    color: #3c3c3c;
+    font-weight: 300;
+    text-align: center;
+
+    &__title {
+        margin-bottom: rem(15);
+    }
+
+    &__subtitle {
+        font-size: rem(25);
+        margin-bottom: rem(19);
+    }
+
+    &__btn {
+        width: rem(284);
+        margin: 0 auto;
+    }
+}

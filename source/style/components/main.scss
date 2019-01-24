@@ -1,0 +1,16 @@
+.main {
+    width: 1560px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1560px) {
+    .main {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        width: calc(100% - 40px);
+    }
+}

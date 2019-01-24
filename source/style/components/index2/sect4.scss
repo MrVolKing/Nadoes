@@ -1,0 +1,60 @@
+.sect4 {
+    padding: rem(53) 0 rem(29);
+    border: 1px solid #e4e4e4;
+
+    background-image: url(../images/index2/Nadoez-finals-0011.jpg);
+    background-position: left -217px top;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    // .main2 {
+    //     display: flex;
+    //     justify-content: flex-end;
+    // }
+
+
+    &__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        width: rem(756);
+        // margin-left: rem(251);
+
+        margin-left: 27.6875rem;
+    }
+
+    &__block {
+        width: rem(168);
+        height: rem(231);
+        margin-left: rem(21);
+        margin-bottom: rem(21);
+        border: 1px solid #e4e4e4;
+
+        text-align: center;
+        color: #313131;
+
+        &-img {
+            width: 100%;
+            height: rem(120);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        &-title {
+            font-size: rem(16);
+            text-transform: uppercase;
+            margin-bottom: rem(10);
+        }
+
+        &-text {
+            font-size: rem(10);
+            font-weight: 300;
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .sect4{
+        padding: 0 0 24px 0;
+    }
+}
