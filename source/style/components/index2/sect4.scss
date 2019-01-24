@@ -19,8 +19,10 @@
         width: rem(756);
         // margin-left: rem(251);
 
-        margin-left: 27.6875rem;
+        margin-left: 35.6875rem;
     }
+
+
 
     &__block {
         width: rem(168);
@@ -52,6 +54,13 @@
     }
 }
 
+@media screen and (max-width: 1200px){
+    .sect4{
+        &__blocks{
+            margin-left: 43.6875rem;
+        }
+    }
+}
 
 @media screen and (max-width: 767px){
     .sect4{
