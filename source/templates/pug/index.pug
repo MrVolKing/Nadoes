@@ -4,7 +4,7 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='./style/foundation.css')
-        link(rel="stylesheet" href='./style/style.css?4')
+        link(rel="stylesheet" href='./style/style.css?5')
     body
 
         header.header2
@@ -535,7 +535,7 @@ html
 
                 $('#show-tbl').on('click', function(e) {
                     e.preventDefault();
-                    $('.table2').removeClass('adaptive_table');
+                    $('.table2').toggleClass('adaptive_table');
                 });
 
             });
