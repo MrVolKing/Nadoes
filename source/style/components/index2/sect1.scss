@@ -49,5 +49,19 @@
         &__desc{
             font-size: 18px;
         }
+
+        &__btns{
+            .btn2{
+               margin: 0;
+            }
+            .btn2:first-child{
+                margin-right: 10px;
+            }
+
+            .btn2:last-child{
+                padding: 0 5px;
+                font-size: 14px;
+            }
+        }
     }
 }

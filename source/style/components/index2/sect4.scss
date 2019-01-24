@@ -63,3 +63,24 @@
         }
     }
 }
+
+@media screen and (max-width: 500px){
+    .sect4{
+        &__block{
+            margin: 6px;
+            
+        }
+    }
+}
+
+@media screen and (max-width: 410px){
+    .sect4{
+        &__block{
+            width: 120px;
+            &-title{
+                font-size: 14px;
+            }
+            
+        }
+    }
+}

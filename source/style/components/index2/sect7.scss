@@ -104,6 +104,10 @@
         &__btn{
             width: 100%;
         }
+
+        &__left-hr{
+            width: 100%;
+        }
     }
 }
 
@@ -111,6 +115,9 @@
     .sect7{
         &__img{
             width: 200px;
+        }
+        &__content{
+            padding: 40px 16px;
         }
     }
 }
