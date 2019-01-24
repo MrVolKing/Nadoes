@@ -4,7 +4,7 @@
     <title>PageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./style/foundation.css">
-    <link rel="stylesheet" href="./style/style.css?5">
+    <link rel="stylesheet" href="./style/style.css?6">
   </head>
   <body>
     <header class="header2">
@@ -31,7 +31,7 @@
         <div class="sect1__title">NADOES</div>
         <div class="sect1__subtitle">Run. Jump. Swirl</div>
         <div class="sect1__desc">For those who run, jump and just can’t stay still</div>
-        <div class="sect1__btns"><a class="btn2 btn2--blue open-modal-order" href="">order</a><a class="btn2 btn2--blue-trans" href="">Find out more</a></div>
+        <div class="sect1__btns"><a class="btn2 btn2--blue open-modal-order" href="">order</a><a class="btn2 btn2--blue-trans" href="./index_.html">Find out more</a></div>
       </div>
     </div><a name="product"></a>
     <div class="sect2">
@@ -66,12 +66,12 @@
       <div class="main2">
         <div class="sect4__blocks">
           <div class="sect4__block">
-            <div class="sect4__block-img" style="background-image: url(/images/index2/sect4-b1.png);"></div>
+            <div class="sect4__block-img" style="background-image: url(./images/index2/sect4-b1.png);"></div>
             <div class="sect4__block-title">Stylish look</div>
             <div class="sect4__block-text">Goes well with clothes<br>of any style</div>
           </div>
           <div class="sect4__block">
-            <div class="sect4__block-img" style="background-image: url(/images/index2/sect4-b2.png);"></div>
+            <div class="sect4__block-img" style="background-image: url(./images/index2/sect4-b2.png);"></div>
             <div class="sect4__block-title">Freedom of movement</div>
             <div class="sect4__block-text">Your child will play,<br>dance and move<br>with no constraints</div>
           </div>
@@ -101,7 +101,7 @@
             <div class="sect4__block-text">A wide range of colours<br>to go with any clothing</div>
           </div>
           <div class="sect4__block">
-            <div class="sect4__block-img" style="background-image: url(/images/index2/sect4-b8.png);"></div>
+            <div class="sect4__block-img" style="background-image: url(./images/index2/sect4-b8.png);"></div>
             <div class="sect4__block-title">By moms, for moms</div>
             <div class="sect4__block-text">Limited collections<br>created with the needs of mothers in mind</div>
           </div>
@@ -295,21 +295,21 @@
           <div class="sect10__slider-dots" id="sect10__slider-dots"></div>
           <div class="sect10__slider" id="sect10__slider">
             <div class="sect10__slide">
-              <div class="sect10__slide-img" style="background-image: url(/images/index2/sect10-1.png);"></div>
+              <div class="sect10__slide-img" style="background-image: url(./images/index2/sect10-1.png);"></div>
               <div class="sect10__slide-content">
                 <div class="sect10__slide-text">The waistband fit right and my daughter loved that it wasn’t super tight on her thighs or belly area.</div>
                 <div class="sect10__slide-author">Emma</div>
               </div>
             </div>
             <div class="sect10__slide">
-              <div class="sect10__slide-img" style="background-image: url(/images/index2/sect10-1.png);"></div>
+              <div class="sect10__slide-img" style="background-image: url(./images/index2/sect10-1.png);"></div>
               <div class="sect10__slide-content">
                 <div class="sect10__slide-text">Love the breathable wicking fabric. Would probably wear these under dresses, to bed or even out playing in the summer time!</div>
                 <div class="sect10__slide-author">Chloe</div>
               </div>
             </div>
             <div class="sect10__slide">
-              <div class="sect10__slide-img" style="background-image: url(/images/index2/sect10-1.png);"></div>
+              <div class="sect10__slide-img" style="background-image: url(./images/index2/sect10-1.png);"></div>
               <div class="sect10__slide-content">
                 <div class="sect10__slide-text">The idea of the bloomers under dresses and skirts is awesome, especially during the hot months I really like the moisture wicking materia, it was very lightweight and breathable.</div>
                 <div class="sect10__slide-author">Olivia</div>
@@ -406,7 +406,6 @@
       </form>
     </div>
     <script src="js/foundation.js"></script>
-    <script src="js/custom.js"></script>
     <script>
       $(function() {
           //- if ($(window).width() >= 768) {
@@ -417,7 +416,7 @@
               infinite: true,
               dots: true,
               appendDots: '#sect10__slider-dots',
-              autoplay: true,
+              //- autoplay: true,
           });
       
           $('.open-modal-order').on('click', function(e) {
@@ -451,7 +450,26 @@
                   $('.h-blackout').hide();
                   $('.modal').hide();
               }
-          })
+          });
+      
+      
+                          // bueger
+      
+          $('.burger').click(function() {
+              $('.adaptmenu').addClass('adaptmenu_active');
+              $('body').css('overflow', 'hidden');
+          });
+      
+          $('.close').click(function() {
+              $('.adaptmenu').removeClass('adaptmenu_active');
+              $('body').css('overflow', 'visible');
+          });
+      
+          $('.adaptmenu nav').click(function() {
+              $('.adaptmenu').removeClass('adaptmenu_active');
+              $('body').css('overflow', 'visible');
+          });
+      
       });
     </script>
   </body>

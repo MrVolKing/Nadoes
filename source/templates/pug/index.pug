@@ -4,7 +4,7 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='./style/foundation.css')
-        link(rel="stylesheet" href='./style/style.css?5')
+        link(rel="stylesheet" href='./style/style.css?6')
     body
 
         header.header2
@@ -51,7 +51,7 @@ html
 
                 .sect1__btns
                     a(href="").btn2.btn2--blue.open-modal-order order
-                    a(href="").btn2.btn2--blue-trans Find out more
+                    a(href="./index_.html").btn2.btn2--blue-trans Find out more
 
         a(name="product")
         .sect2
@@ -108,14 +108,14 @@ html
                 .sect4__blocks
 
                     .sect4__block
-                        .sect4__block-img(style="background-image: url(/images/index2/sect4-b1.png)")
+                        .sect4__block-img(style="background-image: url(./images/index2/sect4-b1.png)")
                         .sect4__block-title Stylish look
                         .sect4__block-text
                             | Goes well with clothes
                             br
                             | of any style
                     .sect4__block
-                        .sect4__block-img(style="background-image: url(/images/index2/sect4-b2.png)")
+                        .sect4__block-img(style="background-image: url(./images/index2/sect4-b2.png)")
                         .sect4__block-title Freedom of movement
                         .sect4__block-text
                             | Your child will play,
@@ -167,7 +167,7 @@ html
                             | to go with any clothing
 
                     .sect4__block
-                        .sect4__block-img(style="background-image: url(/images/index2/sect4-b8.png)")
+                        .sect4__block-img(style="background-image: url(./images/index2/sect4-b8.png)")
                         .sect4__block-title By moms, for moms
                         .sect4__block-text
                             | Limited collections
@@ -359,17 +359,17 @@ html
                     .sect10__slider-dots#sect10__slider-dots
                     .sect10__slider#sect10__slider
                         .sect10__slide
-                            .sect10__slide-img(style="background-image: url(/images/index2/sect10-1.png)")
+                            .sect10__slide-img(style="background-image: url(./images/index2/sect10-1.png)")
                             .sect10__slide-content
                                 .sect10__slide-text The waistband fit right and my daughter loved that it wasn’t super tight on her thighs or belly area.
                                 .sect10__slide-author Emma
                         .sect10__slide
-                            .sect10__slide-img(style="background-image: url(/images/index2/sect10-1.png)")
+                            .sect10__slide-img(style="background-image: url(./images/index2/sect10-1.png)")
                             .sect10__slide-content
                                 .sect10__slide-text Love the breathable wicking fabric. Would probably wear these under dresses, to bed or even out playing in the summer time!
                                 .sect10__slide-author Chloe
                         .sect10__slide
-                            .sect10__slide-img(style="background-image: url(/images/index2/sect10-1.png)")
+                            .sect10__slide-img(style="background-image: url(./images/index2/sect10-1.png)")
                             .sect10__slide-content
                                 .sect10__slide-text The idea of the bloomers under dresses and skirts is awesome, especially during the hot months I really like the moisture wicking materia, it was very lightweight and breathable.
                                 .sect10__slide-author Olivia
@@ -461,7 +461,7 @@ html
 
 
         script(src='js/foundation.js')
-        script(src='js/custom.js')
+        
 
         script.
             $(function() {
@@ -473,7 +473,7 @@ html
                     infinite: true,
                     dots: true,
                     appendDots: '#sect10__slider-dots',
-                    autoplay: true,
+                    //- autoplay: true,
                 });
 
                 $('.open-modal-order').on('click', function(e) {
@@ -507,7 +507,26 @@ html
                         $('.h-blackout').hide();
                         $('.modal').hide();
                     }
-                })
+                });
+
+
+                                // bueger
+
+                $('.burger').click(function() {
+                    $('.adaptmenu').addClass('adaptmenu_active');
+                    $('body').css('overflow', 'hidden');
+                });
+
+                $('.close').click(function() {
+                    $('.adaptmenu').removeClass('adaptmenu_active');
+                    $('body').css('overflow', 'visible');
+                });
+
+                $('.adaptmenu nav').click(function() {
+                    $('.adaptmenu').removeClass('adaptmenu_active');
+                    $('body').css('overflow', 'visible');
+                });
+
             });
 
 

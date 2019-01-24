@@ -64,6 +64,18 @@
 
 @media screen and (max-width: 767px){
     .sect8{
-        // display: none;
+        padding: 50px 0;
+        &__table{
+            width: 100%;
+            &-title{
+                font-size: 8px;
+            }
+            &-cell{
+                font-size: 8px;
+            }
+            &-row{
+                font-size: 8px;
+            }
+        }
     }
 }

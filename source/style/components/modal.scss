@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 767px) {
     .modal {
-        width: 100%;
+        width: 90%;
         padding: 81px 25px 45px;
 
         &__close {
@@ -43,5 +43,11 @@
             transform: translateX(50%);
             top: 29px;
         }
+        input{
+            @include placeholder{
+                font-size: 15px;
+            }
+        }
     }
+
 }
