@@ -38,16 +38,18 @@
 
 @media screen and (max-width: 767px){
     .sect1{
+        padding: 10px 0;
         &__title{
-            font-size: 60px;
+            font-size: 40px;
         }
 
         &__subtitle{
-            font-size: 30px;
+            font-size: 26px;
         }
 
         &__desc{
-            font-size: 18px;
+            font-size: 16px;
+            margin: 10px 0 20px 0;
         }
 
         &__btns{
@@ -63,5 +65,11 @@
                 font-size: 14px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 400px){
+    .sect1{
+        background-position: initial;
     }
 }
