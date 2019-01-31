@@ -165,13 +165,13 @@
               <div class="slider_nav__item"><img src="./images/index2/lb_1.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/lb_2.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/lb_3.png" alt=""></div>
-              <div class="slider_nav__item"><img src="./images/index2/lb_4.png" alt=""></div>
+              <div class="slider_nav__item"><img src="./images/index2/Nadoez-finals-0002.jpg" alt=""></div>
             </div>
             <div class="slider_product">
               <div class="slider_product__item"><img src="./images/index2/lb_1.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/lb_2.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/lb_3.png" alt=""></div>
-              <div class="slider_product__item"><img src="./images/index2/lb_4.png" alt=""></div>
+              <div class="slider_product__item"><img src="./images/index2/Nadoez-finals-0002.jpg" alt=""></div>
             </div>
           </div>
           <div class="sect7__right pink_group">
@@ -482,8 +482,8 @@
         </div><a class="button button--blue button--big button--adptv" href="">To choose the right size</a>
       </form>
     </div>
-    <script src="js/foundation.js?6"></script>
-    <script src="js/jquery.zoom.min.js?6"></script>
+    <script src="js/foundation.js?7"></script>
+    <script src="js/jquery.zoom.min.js?7"></script>
     <script>
       $(function() {
           //- if ($(window).width() >= 768) {
@@ -610,33 +610,37 @@
       
       
            // slider product
-          $('.slider_product').slick({
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              initialSlide: 0,
-              arrows: false,
-              fade: true,
-              asNavFor: '.slider_nav',
-              draggable: false,
-              responsive: [
-                  { breakpoint: 900,
-                      settings: {
-                          dots: true
+           setInterval(function() {
+              $('.slider_product').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  initialSlide: 0,
+                  arrows: false,
+                  fade: true,
+                  asNavFor: '.slider_nav',
+                  draggable: false,
+                  adaptiveHeight: true,
+                  responsive: [
+                      { breakpoint: 900,
+                          settings: {
+                              dots: true
+                          }
                       }
-                  }
-              ]
-          });
+                  ]
+              });
       
-          $('.slider_nav').slick({
-              slidesToShow: 4,
-              slidesToScroll: 0,
-              asNavFor: '.slider_product',
-              dots: false,
-              centerMode: true,
-              focusOnSelect: true,
-              vertical: true,
-                                  
-          });
+              $('.slider_nav').slick({
+                  slidesToShow: 4,
+                  slidesToScroll: 0,
+                  asNavFor: '.slider_product',
+                  dots: false,
+                  centerMode: true,
+                  focusOnSelect: true,
+                  vertical: true,
+                                      
+              });
+          }, 1000);
+          
       
       
           
@@ -645,8 +649,34 @@
       
       
       
-      //- $(window).onload(function() {
-      //-     console.log("window");
+      //- $(window).load(function() {
+      //-     $('.slider_product').slick({
+      //-         slidesToShow: 1,
+      //-         slidesToScroll: 1,
+      //-         initialSlide: 0,
+      //-         arrows: false,
+      //-         fade: true,
+      //-         asNavFor: '.slider_nav',
+      //-         draggable: false,
+      //-         responsive: [
+      //-             { breakpoint: 900,
+      //-                 settings: {
+      //-                     dots: true
+      //-                 }
+      //-             }
+      //-         ]
+      //-     });
+      
+      //-     $('.slider_nav').slick({
+      //-         slidesToShow: 4,
+      //-         slidesToScroll: 0,
+      //-         asNavFor: '.slider_product',
+      //-         dots: false,
+      //-         centerMode: true,
+      //-         focusOnSelect: true,
+      //-         vertical: true,
+                                  
+      //-     });
       //- });
     </script>
   </body>
