@@ -3,12 +3,18 @@
     // border: 1px solid #3c3c3c;
     margin-bottom: 40px;
     margin-left: 96px;
+    position: relative;
     &__item{
+        position: relative;
         img{
             display: block;
             max-width: 100%;
+            position: relative;
+            z-index: 3;
+            background-color: #f5f5f5;
         }
     }
+    
 }
 
 .slider_nav{
@@ -50,9 +56,30 @@
         button{
             display: none;
         }
-    }
-    
+    } 
 }
+
+
+// изменение цвета товара
+
+.white_group, .lblue_group, .pink_group, .blue_group{
+    // display: none !important;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+.activ_group{
+    // display: block !important;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+}
+.active_color{
+    border-width: 2px;
+    border-color: #e93737 !important;
+}
+
 
 @media screen and (max-width: 900px){
     .slider_nav{
