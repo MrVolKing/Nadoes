@@ -4,7 +4,7 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='./style/foundation.css')
-        link(rel="stylesheet" href='./style/style.css?5')
+        link(rel="stylesheet" href='./style/style.css?6')
     body
 
         header.header2
@@ -51,7 +51,7 @@ html
 
                 .sect1__btns
                     a(href="").btn2.btn2--blue.open-modal-order order
-                    a(href="./index_.html").btn2.btn2--blue-trans Find out more
+                    a(href="#").btn2.btn2--blue-trans Find out more
 
         a(name="product")
         .sect2
@@ -600,8 +600,8 @@ html
 
 
         
-        script(src='js/foundation.js?5')
-        script(src='js/jquery.zoom.min.js?5')
+        script(src='js/foundation.js?6')
+        script(src='js/jquery.zoom.min.js?6')
 
         script.
             $(function() {
@@ -678,10 +678,61 @@ html
                 });
 
 
-                // slider product
+                
+                
+
+                // zoom
+                if ($(window).width() >= 900) {
+                    $('.slider_product__item').zoom({
+                        magnify: "1.4"
+                    });
+                    
+                }
+
+
+                // color group
+
+                $(document).on('click', '.sect7__color', function(){
+                    $('.sect7__color').removeClass('active_color');
+                    $(this).addClass('active_color');
+                });
+
+                $('.white').click(function(){
+                    $('.white_group').addClass('activ_group');
+                    $('.lblue_group').removeClass('activ_group');
+                    $('.pink_group').removeClass('activ_group');
+                    $('.blue_group').removeClass('activ_group');
+                    
+                });
+
+                $('.lblue').click(function(){
+                    $('.lblue_group').addClass('activ_group');
+                    $('.white_group').removeClass('activ_group');
+                    $('.pink_group').removeClass('activ_group');
+                    $('.blue_group').removeClass('activ_group');
+                });
+
+                $('.pink').click(function(){
+                    $('.lblue_group').removeClass('activ_group');
+                    $('.white_group').removeClass('activ_group');
+                    $('.pink_group').addClass('activ_group');
+                    $('.blue_group').removeClass('activ_group');
+                });
+
+                $('.blue').click(function(){
+                    $('.lblue_group').removeClass('activ_group');
+                    $('.white_group').removeClass('activ_group');
+                    $('.pink_group').removeClass('activ_group');
+                    $('.blue_group').addClass('activ_group');
+                });
+
+
+
+
                 $('.slider_product').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    initialSlide: 0,
                     arrows: false,
                     fade: true,
                     asNavFor: '.slider_nav',
@@ -707,53 +758,24 @@ html
                 });
 
 
-                // zoom
-                if ($(window).width() >= 900) {
-                    $('.slider_product__item').zoom({
-                        magnify: "1.4"
-                    });
-                    
-                }
-
-
-                // color group
-
-                $(document).on('click', '.sect7__color', function(){
-                    $('.sect7__color').removeClass('active_color');
-                    $(this).addClass('active_color');
-                });
-
-                $('.white').click(function(){
-                    $('.white_group').addClass('activ_group');
-                    $('.lblue_group').removeClass('activ_group');
-                    $('.pink_group').removeClass('activ_group');
-                    $('.blue_group').removeClass('activ_group');
-                })
-
-                $('.lblue').click(function(){
-                    $('.lblue_group').addClass('activ_group');
-                    $('.white_group').removeClass('activ_group');
-                    $('.pink_group').removeClass('activ_group');
-                    $('.blue_group').removeClass('activ_group');
-                })
-
-                $('.pink').click(function(){
-                    $('.lblue_group').removeClass('activ_group');
-                    $('.white_group').removeClass('activ_group');
-                    $('.pink_group').addClass('activ_group');
-                    $('.blue_group').removeClass('activ_group');
-                })
-
-                $('.blue').click(function(){
-                    $('.lblue_group').removeClass('activ_group');
-                    $('.white_group').removeClass('activ_group');
-                    $('.pink_group').removeClass('activ_group');
-                    $('.blue_group').addClass('activ_group');
-                })
-
-
-
             });
+
+
+
+
+
+
+            // slider product
+
+
+            //- window.setInterval(function(){
+
+                
+            //-     //- console.log('e');
+
+            //- }, 1000)
+            
+            
 
 
 

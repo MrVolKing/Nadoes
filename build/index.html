@@ -4,7 +4,7 @@
     <title>PageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./style/foundation.css">
-    <link rel="stylesheet" href="./style/style.css?5">
+    <link rel="stylesheet" href="./style/style.css?6">
   </head>
   <body>
     <header class="header2">
@@ -31,7 +31,7 @@
         <div class="sect1__title">NADOES</div>
         <div class="sect1__subtitle">Run. Jump. Swirl</div>
         <div class="sect1__desc">For those who run, jump and just can’t stay still</div>
-        <div class="sect1__btns"><a class="btn2 btn2--blue open-modal-order" href="">order</a><a class="btn2 btn2--blue-trans" href="./index_.html">Find out more</a></div>
+        <div class="sect1__btns"><a class="btn2 btn2--blue open-modal-order" href="">order</a><a class="btn2 btn2--blue-trans" href="#">Find out more</a></div>
       </div>
     </div><a name="product"></a>
     <div class="sect2">
@@ -482,8 +482,8 @@
         </div><a class="button button--blue button--big button--adptv" href="">To choose the right size</a>
       </form>
     </div>
-    <script src="js/foundation.js?5"></script>
-    <script src="js/jquery.zoom.min.js?5"></script>
+    <script src="js/foundation.js?6"></script>
+    <script src="js/jquery.zoom.min.js?6"></script>
     <script>
       $(function() {
           //- if ($(window).width() >= 768) {
@@ -559,10 +559,61 @@
           });
       
       
-          // slider product
+          
+          
+      
+          // zoom
+          if ($(window).width() >= 900) {
+              $('.slider_product__item').zoom({
+                  magnify: "1.4"
+              });
+              
+          }
+      
+      
+          // color group
+      
+          $(document).on('click', '.sect7__color', function(){
+              $('.sect7__color').removeClass('active_color');
+              $(this).addClass('active_color');
+          });
+      
+          $('.white').click(function(){
+              $('.white_group').addClass('activ_group');
+              $('.lblue_group').removeClass('activ_group');
+              $('.pink_group').removeClass('activ_group');
+              $('.blue_group').removeClass('activ_group');
+              
+          });
+      
+          $('.lblue').click(function(){
+              $('.lblue_group').addClass('activ_group');
+              $('.white_group').removeClass('activ_group');
+              $('.pink_group').removeClass('activ_group');
+              $('.blue_group').removeClass('activ_group');
+          });
+      
+          $('.pink').click(function(){
+              $('.lblue_group').removeClass('activ_group');
+              $('.white_group').removeClass('activ_group');
+              $('.pink_group').addClass('activ_group');
+              $('.blue_group').removeClass('activ_group');
+          });
+      
+          $('.blue').click(function(){
+              $('.lblue_group').removeClass('activ_group');
+              $('.white_group').removeClass('activ_group');
+              $('.pink_group').removeClass('activ_group');
+              $('.blue_group').addClass('activ_group');
+          });
+      
+      
+      
+      
           $('.slider_product').slick({
               slidesToShow: 1,
               slidesToScroll: 1,
+              initialSlide: 0,
               arrows: false,
               fade: true,
               asNavFor: '.slider_nav',
@@ -588,53 +639,22 @@
           });
       
       
-          // zoom
-          if ($(window).width() >= 900) {
-              $('.slider_product__item').zoom({
-                  magnify: "1.4"
-              });
-              
-          }
-      
-      
-          // color group
-      
-          $(document).on('click', '.sect7__color', function(){
-              $('.sect7__color').removeClass('active_color');
-              $(this).addClass('active_color');
-          });
-      
-          $('.white').click(function(){
-              $('.white_group').addClass('activ_group');
-              $('.lblue_group').removeClass('activ_group');
-              $('.pink_group').removeClass('activ_group');
-              $('.blue_group').removeClass('activ_group');
-          })
-      
-          $('.lblue').click(function(){
-              $('.lblue_group').addClass('activ_group');
-              $('.white_group').removeClass('activ_group');
-              $('.pink_group').removeClass('activ_group');
-              $('.blue_group').removeClass('activ_group');
-          })
-      
-          $('.pink').click(function(){
-              $('.lblue_group').removeClass('activ_group');
-              $('.white_group').removeClass('activ_group');
-              $('.pink_group').addClass('activ_group');
-              $('.blue_group').removeClass('activ_group');
-          })
-      
-          $('.blue').click(function(){
-              $('.lblue_group').removeClass('activ_group');
-              $('.white_group').removeClass('activ_group');
-              $('.pink_group').removeClass('activ_group');
-              $('.blue_group').addClass('activ_group');
-          })
-      
-      
-      
       });
+      
+      
+      
+      
+      
+      
+      // slider product
+      
+      
+      //- window.setInterval(function(){
+      
+          
+      //-     //- console.log('e');
+      
+      //- }, 1000)
     </script>
   </body>
 </html>
