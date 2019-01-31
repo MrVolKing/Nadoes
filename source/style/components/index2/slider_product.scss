@@ -43,7 +43,11 @@
         &.slick-active{
             opacity: 1;
         }
+        button{
+            display: none;
+        }
     }
+    
 }
 
 @media screen and (max-width: 900px){
