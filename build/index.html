@@ -4,7 +4,7 @@
     <title>PageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./style/foundation.css">
-    <link rel="stylesheet" href="./style/style.css?8">
+    <link rel="stylesheet" href="./style/style.css?1">
   </head>
   <body>
     <header class="header2">
@@ -165,13 +165,13 @@
               <div class="slider_nav__item"><img src="./images/index2/lb_1.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/lb_2.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/lb_3.png" alt=""></div>
-              <div class="slider_nav__item"><img src="./images/index2/Nadoez-finals-0002.jpg" alt=""></div>
+              <div class="slider_nav__item"><img src="./images/index2/lb_4.png" alt=""></div>
             </div>
             <div class="slider_product">
               <div class="slider_product__item"><img src="./images/index2/lb_1.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/lb_2.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/lb_3.png" alt=""></div>
-              <div class="slider_product__item"><img src="./images/index2/Nadoez-finals-0002.jpg" alt=""></div>
+              <div class="slider_product__item"><img src="./images/index2/lb_4.png" alt=""></div>
             </div>
           </div>
           <div class="sect7__right pink_group">
@@ -204,7 +204,6 @@
           </div>
           <div class="sect7__right blue_group">
             <div class="slider_nav">
-              <div class="slider_nav__item"><img src="./images/index2/b_1.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/b_2.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/b_3.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/b_4.png" alt=""></div>
@@ -212,7 +211,6 @@
               <div class="slider_nav__item"><img src="./images/index2/b_6.png" alt=""></div>
             </div>
             <div class="slider_product">
-              <div class="slider_product__item"><img src="./images/index2/b_1.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/b_2.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/b_3.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/b_4.png" alt=""></div>
@@ -482,14 +480,11 @@
         </div><a class="button button--blue button--big button--adptv" href="">To choose the right size</a>
       </form>
     </div>
-    <script src="js/foundation.js?8"></script>
-    <script src="js/jquery.zoom.min.js?8"></script>
+    <script src="js/foundation.js?1"></script>
+    <script src="js/jquery.zoom.min.js?1"></script>
     <script>
       $(function() {
-          //- if ($(window).width() >= 768) {
-              
-          //- }
-      
+          
           $('#sect10__slider').slick({
               infinite: true,
               dots: true,
@@ -512,6 +507,7 @@
               }
           });
       
+      
           $('#show-modal-size').on('click', function(e) {
               e.preventDefault();
               $('.h-blackout').show();
@@ -520,6 +516,7 @@
                   top: window.pageYOffset + 50
               });
           });
+      
       
           $(window).on('click', function(e) {
               if (
@@ -532,8 +529,7 @@
           });
       
       
-                          // burger
-      
+          // burger
           $('.burger').click(function() {
               $('.adaptmenu').addClass('adaptmenu_active');
               $('body').css('overflow', 'hidden');
@@ -551,16 +547,13 @@
               $('body').css('overflow-x', 'hidden');
           });
       
-          // table
       
+          // table
           $('#show-tbl').on('click', function(e) {
               e.preventDefault();
               $('.table2').toggleClass('adaptive_table');
           });
       
-      
-          
-          
       
           // zoom
           if ($(window).width() >= 900) {
@@ -572,11 +565,11 @@
       
       
           // color group
-      
           $(document).on('click', '.sect7__color', function(){
               $('.sect7__color').removeClass('active_color');
               $(this).addClass('active_color');
           });
+      
       
           $('.white').click(function(){
               $('.white_group').addClass('activ_group');
@@ -594,12 +587,14 @@
               $('.blue_group').removeClass('activ_group');
           });
       
+      
           $('.pink').click(function(){
               $('.lblue_group').removeClass('activ_group');
               $('.white_group').removeClass('activ_group');
               $('.pink_group').addClass('activ_group');
               $('.blue_group').removeClass('activ_group');
           });
+      
       
           $('.blue').click(function(){
               $('.lblue_group').removeClass('activ_group');
@@ -609,20 +604,14 @@
           });
       
       
-      
-           // slider product
-          //-  setInterval(function() {
-              
-          //- }, 1000);
-      
-      
-          $('.slider_product').slick({
+          //slider init
+          $('.white_group .slider_product').slick({
               slidesToShow: 1,
               slidesToScroll: 1,
               initialSlide: 0,
               arrows: false,
               fade: true,
-              asNavFor: '.slider_nav',
+              asNavFor: '.white_group .slider_nav',
               draggable: false,
               adaptiveHeight: true,
               responsive: [
@@ -634,50 +623,109 @@
               ]
           });
       
-          $('.slider_nav').slick({
+          $('.white_group .slider_nav').slick({
               slidesToShow: 4,
               slidesToScroll: 0,
-              asNavFor: '.slider_product',
+              asNavFor: '.white_group .slider_product',
               dots: false,
               centerMode: true,
               focusOnSelect: true,
               vertical: true,
                                   
           });
-                          
-      });
       
       
+          $('.lblue_group .slider_product').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 0,
+              arrows: false,
+              fade: true,
+              asNavFor: '.lblue_group .slider_nav',
+              draggable: false,
+              adaptiveHeight: true,
+              responsive: [
+                  { breakpoint: 900,
+                      settings: {
+                          dots: true
+                      }
+                  }
+              ]
+          });
       
-      //- $(window).load(function() {
-      //-     $('.slider_product').slick({
-      //-         slidesToShow: 1,
-      //-         slidesToScroll: 1,
-      //-         initialSlide: 0,
-      //-         arrows: false,
-      //-         fade: true,
-      //-         asNavFor: '.slider_nav',
-      //-         draggable: false,
-      //-         responsive: [
-      //-             { breakpoint: 900,
-      //-                 settings: {
-      //-                     dots: true
-      //-                 }
-      //-             }
-      //-         ]
-      //-     });
-      
-      //-     $('.slider_nav').slick({
-      //-         slidesToShow: 4,
-      //-         slidesToScroll: 0,
-      //-         asNavFor: '.slider_product',
-      //-         dots: false,
-      //-         centerMode: true,
-      //-         focusOnSelect: true,
-      //-         vertical: true,
+          $('.lblue_group .slider_nav').slick({
+              slidesToShow: 4,
+              slidesToScroll: 0,
+              asNavFor: '.lblue_group .slider_product',
+              dots: false,
+              centerMode: true,
+              focusOnSelect: true,
+              vertical: true,
                                   
-      //-     });
-      //- });
+          });
+      
+      
+          $('.pink_group .slider_product').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 0,
+              arrows: false,
+              fade: true,
+              asNavFor: '.pink_group .slider_nav',
+              draggable: false,
+              adaptiveHeight: true,
+              responsive: [
+                  { breakpoint: 900,
+                      settings: {
+                          dots: true
+                      }
+                  }
+              ]
+          });
+      
+          $('.pink_group .slider_nav').slick({
+              slidesToShow: 4,
+              slidesToScroll: 0,
+              asNavFor: '.pink_group .slider_product',
+              dots: false,
+              centerMode: true,
+              focusOnSelect: true,
+              vertical: true,
+                                  
+          });
+      
+      
+          $('.blue_group .slider_product').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 0,
+              arrows: false,
+              fade: true,
+              asNavFor: '.blue_group .slider_nav',
+              draggable: false,
+              adaptiveHeight: true,
+              responsive: [
+                  { breakpoint: 900,
+                      settings: {
+                          dots: true
+                      }
+                  }
+              ]
+          });
+      
+          $('.blue_group .slider_nav').slick({
+              slidesToShow: 4,
+              slidesToScroll: 0,
+              asNavFor: '.blue_group .slider_product',
+              dots: false,
+              centerMode: true,
+              focusOnSelect: true,
+              vertical: true,
+                                  
+          });
+          
+                          
+      });            
     </script>
   </body>
 </html>
