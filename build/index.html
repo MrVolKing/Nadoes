@@ -4,7 +4,7 @@
     <title>PageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./style/foundation.css">
-    <link rel="stylesheet" href="./style/style.css?1">
+    <link rel="stylesheet" href="./style/style.css?2">
   </head>
   <body>
     <header class="header2">
@@ -176,8 +176,8 @@
           </div>
           <div class="sect7__right pink_group">
             <div class="slider_nav">
-              <div class="slider_nav__item"><img src="./images/index2/p_1.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/p_2.png" alt=""></div>
+              <div class="slider_nav__item"><img src="./images/index2/p_1.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/p_3.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/p_4.png" alt=""></div>
               <div class="slider_nav__item"><img src="./images/index2/p_5.png" alt=""></div>
@@ -189,8 +189,8 @@
               <div class="slider_nav__item"><img src="./images/index2/p_11.png" alt=""></div>
             </div>
             <div class="slider_product">
-              <div class="slider_product__item"><img src="./images/index2/p_1.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/p_2.png" alt=""></div>
+              <div class="slider_product__item"><img src="./images/index2/p_1.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/p_3.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/p_4.png" alt=""></div>
               <div class="slider_product__item"><img src="./images/index2/p_5.png" alt=""></div>
@@ -557,7 +557,7 @@
       
           // zoom
           if ($(window).width() >= 900) {
-              $('.slider_product__item').zoom({
+              $('.slider_product__item ').zoom({
                   magnify: "1.4"
               });
               
@@ -631,6 +631,7 @@
               centerMode: true,
               focusOnSelect: true,
               vertical: true,
+              //- infinite: false,
                                   
           });
       
@@ -714,7 +715,7 @@
           });
       
           $('.blue_group .slider_nav').slick({
-              slidesToShow: 4,
+              slidesToShow: 7,
               slidesToScroll: 0,
               asNavFor: '.blue_group .slider_product',
               dots: false,
