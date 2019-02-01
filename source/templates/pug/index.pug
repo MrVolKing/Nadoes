@@ -4,7 +4,7 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='./style/foundation.css')
-        link(rel="stylesheet" href='./style/style.css?6')
+        link(rel="stylesheet" href='./style/style.css?8')
     body
 
         header.header2
@@ -602,8 +602,8 @@ html
 
 
         
-        script(src='js/foundation.js?7')
-        script(src='js/jquery.zoom.min.js?7')
+        script(src='js/foundation.js?8')
+        script(src='js/jquery.zoom.min.js?8')
 
         script.
             $(function() {
@@ -707,6 +707,7 @@ html
                     
                 });
 
+
                 $('.lblue').click(function(){
                     $('.lblue_group').addClass('activ_group');
                     $('.white_group').removeClass('activ_group');
@@ -731,41 +732,40 @@ html
 
 
                  // slider product
-                 setInterval(function() {
-                    $('.slider_product').slick({
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        initialSlide: 0,
-                        arrows: false,
-                        fade: true,
-                        asNavFor: '.slider_nav',
-                        draggable: false,
-                        adaptiveHeight: true,
-                        responsive: [
-                            { breakpoint: 900,
-                                settings: {
-                                    dots: true
-                                }
+                //-  setInterval(function() {
+                    
+                //- }, 1000);
+
+
+                $('.slider_product').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 0,
+                    arrows: false,
+                    fade: true,
+                    asNavFor: '.slider_nav',
+                    draggable: false,
+                    adaptiveHeight: true,
+                    responsive: [
+                        { breakpoint: 900,
+                            settings: {
+                                dots: true
                             }
-                        ]
-                    });
+                        }
+                    ]
+                });
 
-                    $('.slider_nav').slick({
-                        slidesToShow: 4,
-                        slidesToScroll: 0,
-                        asNavFor: '.slider_product',
-                        dots: false,
-                        centerMode: true,
-                        focusOnSelect: true,
-                        vertical: true,
-                                            
-                    });
-                }, 1000);
-                
-
-
-                
-                
+                $('.slider_nav').slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 0,
+                    asNavFor: '.slider_product',
+                    dots: false,
+                    centerMode: true,
+                    focusOnSelect: true,
+                    vertical: true,
+                                        
+                });
+                                
             });
 
 

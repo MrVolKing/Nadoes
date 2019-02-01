@@ -67,18 +67,34 @@
 // изменение цвета товара
 
 .white_group, .lblue_group, .pink_group, .blue_group{
-    // display: none !important;
+    
     position: absolute;
     z-index: 1;
     opacity: 0;
+    
+    
+}
+
+@media screen and (max-width: 900px){
+    .white_group, .lblue_group, .pink_group, .blue_group{
+        position: relative;
+        height: 1px;
+        overflow: hidden;
+        margin: 0;
+        
+    }
 }
 
 .activ_group{
-    // display: block !important;
+    
     position: relative;
     z-index: 2;
     opacity: 1;
+    height: initial;
+    overflow: visible;
+    
 }
+
 .active_color{
     border-width: 2px;
     border-color: #e93737 !important;
@@ -93,6 +109,24 @@
     .slider_product{
         margin-left: 0;
         border: none;
+    }
+
+    .white_group, .lblue_group, .pink_group, .blue_group{
+        position: relative;
+        height: 1px;
+        overflow: hidden;
+        margin: 0;
+        
+    }
+
+    .activ_group{
+    
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        height: initial;
+        overflow: visible;
+        
     }
 }
 
